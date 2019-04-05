@@ -1,9 +1,10 @@
 # Cloud9 Debugging Lab
-
+We are going to build a lambda function that tests to see if a string is a Palindrome (is the same read 
+forwards and backwards i.e racecar)
 
 ### Creating a Lambda Function
 - Once the Cloud9 environment has opened you will see a Folder Structure on the LHS that contains a folder called "isPalindrome". This is also the location of these instructions
-- In the bash shell window (at the bottom) cd into ```~/environment/isPalindrome```
+- In the bash shell window (at the bottom) cd into ```~/environment/cloud9debug/isPalindrome```
 - Select the "AWS Resources" section on the right-hand navigation bar.(it should pop out, if its not already visible)
   - You will see a Lambda section with Local and Remote Functions
   - We are going to create a Local Function
@@ -16,7 +17,7 @@
   - Next -> Finish
 
 So now you will have a Function called isPalindrome that will be executed when the /isPalindrome endpoint is hit on your API Gateway
-The editor will open in the index.js of your Function - so lets write some code
+Once created the editor will open in the index.js of your Function
 
 **Write or paste in the following code block**
 (replace EVERYTHING thats already there and dont forget to save once your done)
@@ -37,13 +38,13 @@ exports.handler = (event, context, callback) => {
 
 
 Now we have a function, let's run/debug it and test that it works.
-- hit the Run Button at the top of the screen, beside "Preview". (The run/debug panel will appear)
-- hit the Run button inside the run panel ( you should see an error - "TypeError: Cannot read property "split" of undefined" ).  This is because we havent passed in a string value for the word we want to test.  Lets do that by using the payload area.
-- add the following Json into the Payload: TextArea  ```{"inputWord":"racecar"}```
+- Navigate back into index.js and hit the Run Button at the top of the screen, beside "Preview". (The run/debug panel will appear)
+- Hit the Run button inside the run panel ( you should see an error - "TypeError: Cannot read property "split" of undefined" ).  This is because we havent passed in a string value for the word we want to test.  Lets do that by using the payload area.
+- Add the following Json into the Payload: TextArea  ```{"inputWord":"racecar"}```
 - hit the run button again and you should get the output ```racecar is a Palindrome```
 - now add a negative test by changing the payload to test another word and see that working ".... is not a Palindrome"
   
-**adding BreakPoints / using a REPL Loop**
+**adding BreakPoints / using Immediate Window(REPL Loop)**
 
 To enable breakpoints, simply make sure the 'debug' icon is enabled beside the run button and you have a breakpoint set in the code in index.js
 
@@ -111,5 +112,5 @@ That's it - pretty easy and a great way to Build/Test and Deploy functions quick
 - In Cloud9 Navigate to the bash shell
 - cd into ```isPalindrome/scripts/``` 
 - Execute the cleanup scripts ```./CleanUp.sh```
+(if you get permission denied - run 'chmod 777 cleanup.sh' - then try running the script again)
 - Go and do another Lab :)
-
