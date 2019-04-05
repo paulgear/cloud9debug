@@ -11,7 +11,7 @@ The following steps will provision the initial Cloud9 environment, and can be us
 2. Name the stack Cloud9-Debug-Lab
 2. Verify that the is now a new cloud9 environment provisioned
 
-### Setup - **
+### Setup
 1. Navigate to AWS Console -> Cloud9 -> Account Environments.
 - Find the Environment called Cloud9-Debug-Lab and select the "Open IDE" button.
 - A new Cloud9 enviroment will open with a few files already checked out from this git repo.
