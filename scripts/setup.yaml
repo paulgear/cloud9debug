@@ -4,7 +4,7 @@ Parameters:
     Description: EC2 instance type on which IDE runs
     Type: String
   AutoHibernateTimeout:
-    Default: 60
+    Default: 240
     Description: How many minutes idle before shutting down the IDE
     Type: Number
 
@@ -15,6 +15,7 @@ Resources:
       Repositories:
       - RepositoryUrl: https://github.com/deekob/cloud9debug.git
         PathComponent: cloud9debug
+      OwnerArn: !Sub "arn:aws:iam::${AWS::AccountId}:user/labStudent_1"
       Description: cloud9-debug-lambda
       AutomaticStopTimeMinutes:
         Ref: AutoHibernateTimeout
