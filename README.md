@@ -10,7 +10,7 @@ This lab aims to show users how easy it is to create, build, test and deploy a L
    - Goto Cloud9
    - Go to Account Environments.
    - Select Open IDE 
-   <img src="./Cloud9.jpeg" width="45%">
+   <img src="./Cloud9.jpeg" width="100%">
   
 - Find the Environment called Cloud9-Debug-Lab and select the "Open IDE" button.
 - A new Cloud9 enviroment will open with a few files already checked out from this git repo.
