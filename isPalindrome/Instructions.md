@@ -39,8 +39,8 @@ exports.handler = (event, context, callback) => {
 
 Now we have a function, let's run/debug it and test that it works.
 - Navigate back into index.js and hit the Run Button at the top of the screen, beside "Preview". (The run/debug panel will appear)
-- Hit the Run button inside the run panel ( you should see an error - "TypeError: Cannot read property "split" of undefined" ).  This is because we havent passed in a string value for the word we want to test.  Lets do that by using the payload area.
-- Add the following Json into the Payload: TextArea  ```{"inputWord":"racecar"}```
+- Hit the Run button inside the run panel ( you should see an error - "TypeError: Cannot read property "split" of undefined" ).  This is because we haven't passed in a string value for the word we want to test.  Lets do that by using the payload area.
+- Add the following Json into the Payload: ```{"inputWord":"racecar"}```
 - hit the run button again and you should get the output ```racecar is a Palindrome```
 - now add a negative test by changing the payload to test another word and see that working ".... is not a Palindrome"
   
